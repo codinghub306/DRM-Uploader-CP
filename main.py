@@ -42,11 +42,13 @@ except ValueError:
         raise Exception("Your Admins list does not contain valid integers.") 
 ADMINS.append(OWNER)
 
-bot = Client("bot",    
-   bot_token="",    
-   api_id= ,    
-   api_hash= ""
+bot = Client(
+    "bot",
+    api_id=API_ID,
+    api_hash=API_HASH,
+    bot_token=BOT_TOKEN
 )
+
 
 @bot.on_message(filters.command(["started"]))    
 async def account_login(bot: Client, m: Message):    
